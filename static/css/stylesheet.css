@@ -17,6 +17,9 @@
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
+.header__medias__item:hover {
+  opacity: 0.5;
+}
 .header__menu {
   width: 100%;
   margin-top: 2em;
@@ -33,6 +36,9 @@
   color: rgba(127, 190, 132, 1);
   font-family: "Cormorant Garamond";
   font-weight: 900;
+}
+.header__menu a:hover {
+  opacity: 0.5;
 }
 .header__menu a:last-child {
   float: right;
