@@ -37,7 +37,7 @@
 .header__menu {
   width: 100%;
   margin-top: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 4em;
   padding-top: 1em;
   padding-bottom: 1em;
   display: flex;
@@ -159,6 +159,8 @@
   padding-top: 2em;
   padding-bottom: 2em;
   background: rgba(0, 0, 0, 0.05);
+  margin-top: 2em;
+  margin-bottom: 4em;
 }
 
 .instagramphotos__item {
