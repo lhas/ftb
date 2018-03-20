@@ -173,11 +173,11 @@
   overflow: hidden;
   text-decoration: none;
   margin-bottom: 2em;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.55);
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.35);
 }
 
 .instagramphotos__item:hover {
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .instagramphotos__item__photo {
@@ -253,6 +253,87 @@
   flex-direction: column;
   font-size: 1.75em;
   margin-bottom: 1em;
+}
+
+.content {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+.content__grid__item {
+  width: 90%;
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+}
+.content__grid__item__photo {
+  width: 100%;
+  height: 10em;
+  background-size: cover;
+}
+.content__grid__item__inner {
+  background: #fff;
+  padding: 1em;
+}
+.content__grid__item__inner__meta__category {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+.content__grid__item__inner__meta__date {
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.35);
+  font-weight: 300;
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+
+.content__grid__item__inner__meta {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1em;
+  justify-content: space-between;
+}
+
+.content__grid__item__inner__title {
+  font-weight: 900;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 1.75em;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 0.5em;
+}
+
+.content__grid__item__inner__text {
+  font-weight: 300;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.75);
+}
+.content__grid__item__inner__readmore {
+  margin-top: 0.5em;
+  font-weight: 700;
+  transition: all 0.15s ease-in-out;
+  color: rgba(127, 190, 132, 1);
+  text-transform: uppercase;
+  font-family: "Fira Sans Condensed", sans-serif;
+  border-radius: 6px;
+  padding: 0.5em;
+  float: right;
+}
+
+.content__grid__item:hover {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.content__grid__item:hover .content__grid__item__inner__readmore {
+  background: rgba(127, 190, 132, 0.9);
+  color: #fff;
+}
+
+.content__grid__item:hover .content__grid__item__inner__title {
+  color: rgba(127, 190, 132, 1);
 }
 
 @media only screen and (min-width: 768px) {
