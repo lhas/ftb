@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="header__inner">
-            <a href="/index.html" class="header__logo">
+            <a href="<?php home_url(); ?>" class="header__logo">
               <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" alt="Feed the Birds">
             </a>
             <div class="header__medias">

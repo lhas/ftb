@@ -55,3 +55,13 @@ function ftb_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ftb_scripts' );
+
+function ftb_excerpt_more( $more ) {
+	return '...';
+}
+add_filter( 'excerpt_more', 'ftb_excerpt_more' );
+
+function main_category() {
+	$category = get_the_category(); 
+	return $category[0]->cat_name;
+}
