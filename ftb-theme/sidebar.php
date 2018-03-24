@@ -6,46 +6,23 @@
       <div class="content__sidebar__widget">
         <p class="content__sidebar__widget__title">Recent Posts</p>
         <div class="content__sidebar__widget__items">
-          <a href="#" class="content__sidebar__widget__item">
-            <div class="content__sidebar__widget__item__photo">
-              <img src="https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg"
-                alt="">
+          <?php
+            $args = array(
+              'posts_per_page' => 5,
+            );
+$query = new WP_query ( $args );
+if ( $query->have_posts() ) : ?>
+<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+          <a href="<?php the_permalink(); ?>" class="content__sidebar__widget__item">
+            <div class="content__sidebar__widget__item__photo"  style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')">
             </div>
             <div class="content__sidebar__widget__item__meta">
-              <p class="content__sidebar__widget__item__meta__category">ECONOMICS</p>
-              <p class="content__sidebar__widget__item__meta__title">Cannabis Industry is Saving Cities With Struggling</p>
+              <p class="content__sidebar__widget__item__meta__category"><?php echo main_category(); ?></p>
+              <p class="content__sidebar__widget__item__meta__title"><?php the_title(); ?></p>
             </div>
           </a>
-          <a href="#" class="content__sidebar__widget__item">
-            <div class="content__sidebar__widget__item__photo">
-              <img src="https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg"
-                alt="">
-            </div>
-            <div class="content__sidebar__widget__item__meta">
-              <p class="content__sidebar__widget__item__meta__category">ECONOMICS</p>
-              <p class="content__sidebar__widget__item__meta__title">Cannabis Industry is Saving Cities With Struggling</p>
-            </div>
-          </a>
-          <a href="#" class="content__sidebar__widget__item">
-            <div class="content__sidebar__widget__item__photo">
-              <img src="https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg"
-                alt="">
-            </div>
-            <div class="content__sidebar__widget__item__meta">
-              <p class="content__sidebar__widget__item__meta__category">ECONOMICS</p>
-              <p class="content__sidebar__widget__item__meta__title">Cannabis Industry is Saving Cities With Struggling</p>
-            </div>
-          </a>
-          <a href="#" class="content__sidebar__widget__item">
-            <div class="content__sidebar__widget__item__photo">
-              <img src="https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg"
-                alt="">
-            </div>
-            <div class="content__sidebar__widget__item__meta">
-              <p class="content__sidebar__widget__item__meta__category">ECONOMICS</p>
-              <p class="content__sidebar__widget__item__meta__title">Cannabis Industry is Saving Cities With Struggling</p>
-            </div>
-          </a>
+          <?php endwhile; ?>
+<?php endif; ?>
         </div>
         <!-- .content__sidebar__widget__items -->
       </div>
@@ -59,43 +36,13 @@
       </a>
       <div class="content__sidebar__widget">
         <p class="content__sidebar__widget__title">Categories</p>
+        <?php $categories = get_categories(); ?>
         <ul class="content__sidebar__widget__list">
+          <?php foreach($categories as $category) : ?>
           <li>
-            <a href="#">Politics</a>
+            <a href="<?php echo get_category_link($category->term_id); ?>"><?php echo $category->name; ?></a>
           </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
-          <li>
-            <a href="#">Politics</a>
-          </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
-          <li>
-            <a href="#">Politics</a>
-          </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
-          <li>
-            <a href="#">Politics</a>
-          </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
-          <li>
-            <a href="#">Politics</a>
-          </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
-          <li>
-            <a href="#">Politics</a>
-          </li>
-          <li>
-            <a href="#">Economics</a>
-          </li>
+          <?php endforeach; ?>
         </ul>
       </div>
     </div>

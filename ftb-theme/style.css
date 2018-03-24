@@ -391,12 +391,10 @@
   width: 5em;
   height: 5em;
   margin-right: 1em;
-}
-.content__sidebar__widget__item__photo img {
-  width: 100%;
-  height: 100%;
   border-radius: 100%;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  background-size: cover !important;
+  background-position: top center;
 }
 .content__sidebar__widget__item__meta {
   display: flex;
@@ -408,9 +406,10 @@
   font-family: "Fira Sans Condensed", sans-serif;
   margin-bottom: 0.5em;
   color: rgba(127, 190, 132, 1);
+  text-transform: uppercase;
 }
 .content__sidebar__widget__item__meta__title {
-  font-weight: 900;
+  font-weight: 300;
   font-family: "Fira Sans Condensed", sans-serif;
   margin-bottom: 0.5em;
   color: rgba(0, 0, 0, 0.9);
