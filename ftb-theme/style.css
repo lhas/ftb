@@ -441,6 +441,10 @@
   margin-bottom: 1.5em;
 }
 
+#disqus_thread {
+  width: 95%;
+}
+
 .content__sidebar__widget__items {
   display: flex;
   flex-direction: column;
