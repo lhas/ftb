@@ -371,6 +371,11 @@
   font-weight: 300;
   font-family: "Fira Sans Condensed", sans-serif;
 }
+.content__grid__item__inner__meta__category em {
+  margin-left: 1em;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.25);
+}
 .content__grid__item__inner__meta__date {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.35);
@@ -423,12 +428,17 @@
   color: rgba(127, 190, 132, 1);
 }
 
-.content__sidebar__widget__title {
+.content__sidebar__widget__title,
+.content__category {
   text-transform: uppercase;
   font-size: 1.75em;
   color: rgba(127, 190, 132, 1);
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 900;
+}
+
+.content__category {
+  margin-bottom: 1.5em;
 }
 
 .content__sidebar__widget__items {
@@ -644,7 +654,8 @@
   margin-right: 0.5em;
 }
 body.page .content,
-body.post .content {
+body.single .content,
+body.category .content {
   margin-top: 0;
 }
 
