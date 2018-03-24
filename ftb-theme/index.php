@@ -22,17 +22,19 @@
 									*/
 									get_template_part( 'template-post' );
 								endwhile;
-								the_posts_pagination(
-									array(
-										'prev_text'          => '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-										'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>',
-										'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-									)
-								);
-							else :
-								get_template_part( 'template-parts/post/content', 'none' );
 							endif;
 							?>
+							<div class="col-xs-12">
+								<?php 
+									the_posts_pagination(
+										array(
+											'screen_reader_text' => ' ',
+											'prev_text'          => '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
+											'next_text'          => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>',
+											'before_page_number' => '',
+										)
+									); ?>
+							</div>
 						</div>
 					</div>
 			</div>

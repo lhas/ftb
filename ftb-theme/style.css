@@ -598,6 +598,30 @@
   margin-left: 1em;
 }
 
+.nav-links {
+  width: 100%;
+  text-align: center;
+}
+.nav-links a {
+  text-transform: uppercase;
+  font-family: "Fira Sans Condensed";
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 0.5em;
+}
+
+.nav-links .current {
+  text-transform: uppercase;
+  font-family: "Fira Sans Condensed";
+  font-size: 1.5em;
+  font-weight: 300;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 0.5em;
+}
+
 @media only screen and (min-width: 768px) {
   .header__medias {
     position: absolute;
