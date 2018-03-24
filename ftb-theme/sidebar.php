@@ -11,8 +11,7 @@
               'posts_per_page' => 5,
             );
 $query = new WP_query ( $args );
-if ( $query->have_posts() ) : ?>
-<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
           <a href="<?php the_permalink(); ?>" class="content__sidebar__widget__item">
             <div class="content__sidebar__widget__item__photo"  style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')">
             </div>
@@ -21,8 +20,7 @@ if ( $query->have_posts() ) : ?>
               <p class="content__sidebar__widget__item__meta__title"><?php the_title(); ?></p>
             </div>
           </a>
-          <?php endwhile; ?>
-<?php endif; ?>
+          <?php endwhile; endif; ?>
         </div>
         <!-- .content__sidebar__widget__items -->
       </div>
