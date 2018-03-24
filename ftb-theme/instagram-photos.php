@@ -12,42 +12,24 @@
       </div>
     </div>
     <div class="row">
+      <?php
+      $endpoint = 'https://www.instagram.com/explore/tags/weed/?__a=1';
+      $json = json_decode(file_get_contents($endpoint));
+      $limit = 4;
+      $current = 0;
+      foreach($json->graphql->hashtag->edge_hashtag_to_top_posts->edges as $post) :
+        if($current < $limit) :
+          $current++;
+      ?>
       <div class="col-xs-6 col-md-3">
-        <a href="#" class="instagramphotos__item">
+        <a href="https://www.instagram.com/p/<?php echo $post->node->shortcode; ?>/" target="_blank" class="instagramphotos__item">
           <span class="instagramphotos__item__mask"></span>
-          <span class="instagramphotos__item__photo" style="background-image: url('https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg')"></span>
-          <p class="instagramphotos__item__author">@weed_cannabis_420</p>
+          <span class="instagramphotos__item__photo" style="background-image: url('<?php echo $post->node->display_url; ?>')"></span>
           <p class="instagramphotos__item__likes">
-            <i class="material-icons">favorite</i> 51</p>
+            <i class="material-icons">favorite</i> <?php echo $post->node->edge_liked_by->count; ?></p>
         </a>
       </div>
-      <div class="col-xs-6 col-md-3">
-        <a href="#" class="instagramphotos__item">
-          <span class="instagramphotos__item__mask"></span>
-          <span class="instagramphotos__item__photo" style="background-image: url('https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg')"></span>
-          <p class="instagramphotos__item__author">@weed_cannabis_420</p>
-          <p class="instagramphotos__item__likes">
-            <i class="material-icons">favorite</i> 51</p>
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <a href="#" class="instagramphotos__item">
-          <span class="instagramphotos__item__mask"></span>
-          <span class="instagramphotos__item__photo" style="background-image: url('https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg')"></span>
-          <p class="instagramphotos__item__author">@weed_cannabis_420</p>
-          <p class="instagramphotos__item__likes">
-            <i class="material-icons">favorite</i> 51</p>
-        </a>
-      </div>
-      <div class="col-xs-6 col-md-3">
-        <a href="#" class="instagramphotos__item">
-          <span class="instagramphotos__item__mask"></span>
-          <span class="instagramphotos__item__photo" style="background-image: url('https://res.cloudinary.com/jpress/image/fetch/ar_3:2,c_fill,f_auto,q_auto:eco,w_960/https://inews.co.uk/wp-content/uploads/2018/02/Cannabis1-960x640.jpg')"></span>
-          <p class="instagramphotos__item__author">@weed_cannabis_420</p>
-          <p class="instagramphotos__item__likes">
-            <i class="material-icons">favorite</i> 51</p>
-        </a>
-      </div>
+        <?php endif; endforeach; ?>
     </div>
   </div>
 </section>
