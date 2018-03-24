@@ -14,7 +14,16 @@
     <div class="row">
       <?php
       $endpoint = 'https://www.instagram.com/explore/tags/weed/?__a=1';
-      $json = json_decode(file_get_contents($endpoint));
+      $ch = curl_init();
+
+      curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+      curl_setopt($ch, CURLOPT_HEADER, 0);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      curl_setopt($ch, CURLOPT_URL, $endpoint);
+      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+
+      $json = json_decode(curl_exec($ch));
+      curl_close($ch);
       $limit = 4;
       $current = 0;
       foreach($json->graphql->hashtag->edge_hashtag_to_top_posts->edges as $post) :

@@ -8,7 +8,7 @@
         <div class="content__sidebar__widget__items">
           <?php
             $args = array(
-              'posts_per_page' => 5,
+              'posts_per_page' => 4,
             );
 $query = new WP_query ( $args );
 if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
