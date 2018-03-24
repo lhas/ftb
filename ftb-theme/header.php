@@ -23,6 +23,9 @@
               <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" alt="Feed the Birds">
             </a>
             <div class="header__medias">
+              <a href="https://www.facebook.com/feedthebirds420/" class="header__medias__item header__medias__item--search" target="_blank">
+                <i class="material-icons">search</i>
+              </a>
               <a href="https://www.facebook.com/feedthebirds420/" class="header__medias__item" target="_blank">
                 <img src="<?php echo get_theme_file_uri('assets/img/facebook.png'); ?>" alt="Facebook">
               </a>
@@ -39,13 +42,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="header__menu">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Seeds</a>
-            <a href="#">Contact</a>
-            <a href="#">
-              <i class="material-icons">search</i>
-            </a>
+            <?php wp_nav_menu(array('show_home' => true)); ?>
           </div>
         </div>
       </div>
