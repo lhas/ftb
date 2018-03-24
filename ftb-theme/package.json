@@ -1,0 +1,8 @@
+{
+  "name": "feed-the-birds.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:lhas/ftb.git",
+  "author": "Luiz Henrique Almeida da Silva <luizhrqas@gmail.com>",
+  "license": "MIT"
+}
