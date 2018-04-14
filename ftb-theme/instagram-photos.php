@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       <?php
-      $endpoint = 'https://www.instagram.com/explore/tags/weed/?__a=1';
+      $endpoint = 'https://www.instagram.com/explore/tags/feedthebirds/?__a=1';
       $ch = curl_init();
 
       curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);

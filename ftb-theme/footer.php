@@ -8,7 +8,7 @@
           </div>
           <div class="footer__inner__meta">
             <h3 class="footer__inner__meta__title">Feed the Birds</h3>
-            <p class="footer__inner__meta__text">A collective of like-minded individuals who think that this a good way of raising conversation and awareness around prohibition and the current laws. By planting these seeds in public, we’re really showing the public first-hand that the laws have failed. We're also creating a nationwide peaceful guerrilla protest that can run 24/7. Feed the Birds gives everyone a platform so we can all work together for the same cause.</p>
+            <p class="footer__inner__meta__text">Feed the birds is a collective of like-minded individuals who encourage raising awareness of cannabis and hemp seeds by feeding them to birds. The hemp seed is the most useful seed on the world, as well as being the most useful plant. We encourage the legal spreading of hemp seeds for bird feeding purposes.</p>
           </div>
         </div>
         <!-- .footer__inner -->
