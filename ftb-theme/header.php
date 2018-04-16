@@ -23,7 +23,7 @@
               <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" alt="Feed the Birds">
             </a>
             <div class="header__medias">
-              <a href="https://www.facebook.com/feedthebirds420/" class="header__medias__item header__medias__item--search" target="_blank">
+              <a href="<?php echo get_search_link(); ?>" class="header__medias__item header__medias__item--search">
                 <i class="material-icons">search</i>
               </a>
               <a href="https://www.facebook.com/feedthebirds420/" class="header__medias__item" target="_blank">
