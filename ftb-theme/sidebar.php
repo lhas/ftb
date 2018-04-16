@@ -32,6 +32,7 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
           <br /> Here</p>
         <p class="content__sidebar__advertisement__email">contact@feed-the-birds.com</p>
       </a>
+
       <div class="content__sidebar__widget">
         <p class="content__sidebar__widget__title">Categories</p>
         <?php $categories = get_categories(); ?>
@@ -43,6 +44,11 @@ if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(
           <?php endforeach; ?>
         </ul>
       </div>
+
+      <div class="content__sidebar__widget" style="margin-top: 2em;">
+        <div class="fb-page" data-href="https://www.facebook.com/feedthebirds420/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/feedthebirds420/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/feedthebirds420/">Feed The Birds</a></blockquote></div>
+      </div>
+
     </div>
   </div>
 </div>

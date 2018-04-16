@@ -7,6 +7,7 @@
 
 				<div class="content__grid">
 						<div class="row">
+
 							<?php
 							if ( have_posts() ) :
 								/* Start the Loop */
