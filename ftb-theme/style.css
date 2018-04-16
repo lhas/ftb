@@ -659,8 +659,15 @@
 }
 body.page .content,
 body.single .content,
-body.category .content {
+body.category .content,
+body.search .content {
   margin-top: 0;
+}
+
+/* Search */
+.search__title {
+  margin-top: 0em;
+  margin-bottom: 2em;
 }
 
 @media only screen and (min-width: 768px) {

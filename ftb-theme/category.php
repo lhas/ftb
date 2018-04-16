@@ -5,7 +5,6 @@
     <div class="row">
       <div class="col-xs-12 col-md-8">
 
-
       <p class="content__category"><?php single_cat_title(); ?></p>
 
 				<div class="content__grid">
