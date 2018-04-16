@@ -23,7 +23,7 @@
               <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" alt="Feed the Birds">
             </a>
             <div class="header__medias">
-              <a href="<?php echo get_search_link(); ?>" class="header__medias__item header__medias__item--search">
+              <a onclick="document.querySelector('.search__modal').style = 'display: flex;'" class="header__medias__item header__medias__item--search">
                 <i class="material-icons">search</i>
               </a>
               <a href="https://www.facebook.com/feedthebirds420/" class="header__medias__item" target="_blank">
@@ -51,3 +51,10 @@
     <!-- .container -->
   </header>
   <!-- .header -->
+
+  <div class="search__modal" style="display: none;">
+    <form class="search__modal__form" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+      <input class="search__modal__form__input" name="s" placeholder="Search here" type="text">
+    </form>
+    <button class="search__modal__close" onclick="document.querySelector('.search__modal').style = 'display:none;'"><i class="material-icons">close</i></button>
+  </div> <!-- .search__modal -->
