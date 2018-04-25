@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
+  <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5ae0502c429ed50011f9e1d1&product=inline-share-buttons' async='async'></script>
   <?php wp_head(); ?>
 </head>
 
@@ -19,7 +20,7 @@
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12&appId=1877003759264496&autoLogAppEvents=1';
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1877003759264496&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
